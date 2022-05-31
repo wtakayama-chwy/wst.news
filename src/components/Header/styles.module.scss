@@ -1,0 +1,58 @@
+.headerContainer {
+  height: 5rem;
+  border-bottom: 1px solid var(--color-gray-800);
+}
+
+.headerContent {
+  max-width: 1120px;
+  height: inherit;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+
+  nav {
+    margin-left: 5rem;
+    height: inherit;
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 0 0.5rem;
+      height: inherit;
+      line-height: 5rem;
+      color: var(--color-gray-300);
+
+      transition: color 0.25s;
+
+      &:first-child {
+        margin-right: 2rem;
+      }
+
+      &:hover {
+        color: var(--color-white);
+      }
+
+      &.active {
+        color: var(--color-white);
+        font-weight: 600;
+      }
+
+      &.active::after {
+        content: "";
+        height: 3px;
+        border-radius: 3px 3px 0 0;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        background: var(--color-yellow-500);
+      }
+    }
+  }
+
+  button {
+    margin-left: auto;
+  }
+}

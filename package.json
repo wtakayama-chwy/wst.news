@@ -1,0 +1,53 @@
+{
+  "name": "wst.news",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "stripe-dev": "./scripts/stripe listen --forward-to localhost:3000/api/webhooks",
+    "test": "jest --watchAll",
+    "test:debug": "node --expose-gc ./node_modules/.bin/jest --runInBand --logHeapUsage --no-cache"
+  },
+  "dependencies": {
+    "@prismicio/client": "^5.1.0",
+    "@stripe/stripe-js": "^1.16.0",
+    "axios": "^0.21.1",
+    "clsx": "^1.1.1",
+    "faunadb": "^4.3.0",
+    "framer-motion": "^4.1.17",
+    "next": "11.0.1",
+    "next-auth": "^3.27.3",
+    "node-jose-tools": "^1.6.28",
+    "prismic-dom": "^2.2.6",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-toast": "^1.0.3",
+    "stripe": "^8.165.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.x",
+    "@types/next-auth": "^3.15.0",
+    "@types/node": "^16.4.0",
+    "@types/prismic-dom": "^2.1.1",
+    "@types/react": "17.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "babel-jest": "^28.1.0",
+    "eslint": "7.31.0",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.0",
+    "jest-dom": "^4.0.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "jest-mock": "^28.1.0",
+    "prettier": "^2.6.2",
+    "sass": "^1.35.2",
+    "typescript": "4.3.5"
+  }
+}
