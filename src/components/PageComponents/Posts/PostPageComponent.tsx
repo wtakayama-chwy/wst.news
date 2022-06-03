@@ -16,10 +16,10 @@ export function PostPageComponent({ type, post }: PostPageComponentProps) {
   const router = useRouter()
 
   useEffect(() => {
-    if (session?.activeSubscription) {
+    if (session?.activeSubscription && type === 'preview') {
       router.push(`/posts/${post.slug}`)
     }
-  }, [post.slug, router, session])
+  }, [post.slug, router, session, type])
 
   return (
     <PageComponent
@@ -43,7 +43,7 @@ export function PostPageComponent({ type, post }: PostPageComponentProps) {
           {type === 'preview' ? (
             <div className={styles.continueReading}>
               Wanna continue reading?
-              <Link href="">
+              <Link href="/">
                 <a>Subscribe now 🥰</a>
               </Link>
             </div>
